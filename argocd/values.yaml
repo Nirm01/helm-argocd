@@ -1,0 +1,9 @@
+replicaCount: 2
+service:
+  type: ClusterIP
+ingress:
+  enabled: true
+  hostname: nginx.local
+  path: /
+  ingressClassName: nginx
+  annotations: {}

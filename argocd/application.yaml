@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-bitnami
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/Nirm01/helm-argocd
+    targetRevision: main
+    path: argocd
+    helm:
+      chart: nginx
+      repoURL: https://charts.bitnami.com/bitnami
+      version: 15.5.2
+      valueFiles:
+      - values.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-helm
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
