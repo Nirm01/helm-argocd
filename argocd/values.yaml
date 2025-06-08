@@ -2,7 +2,7 @@ replicaCount: 3
 service:
   type: ClusterIP
 ingress:
-  enabled: true
+  enabled: false
   hostname: nginx.local
   path: /
   ingressClassName: nginx
