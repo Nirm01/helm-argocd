@@ -5,25 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
-  source:
-    repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 15.5.2
-    chart: nginx
-    helm:
-      valueFiles:
-      - values.yaml
   sources:
   - repoURL: 'https://charts.bitnami.com/bitnami'
     chart: nginx
-    targetRevision: 15.5.2
+    targetRevision: 20.0.7
     helm:
       valueFiles:
-      - $values/values.yaml
+      - $values/argocd/values.yaml
   - repoURL: 'https://github.com/Nirm01/helm-argocd'
     targetRevision: main
     ref: values
-    path: argocd
 
   destination:
     server: https://kubernetes.default.svc
