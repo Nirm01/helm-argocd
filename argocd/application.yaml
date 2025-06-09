@@ -12,11 +12,12 @@ spec:
     helm:
       valueFiles:
       - $values/argocd/values.yaml
+      values: |
+        replicaCount: 1
   - repoURL: 'https://github.com/Nirm01/helm-argocd'
     targetRevision: main
     ref: values
-    values: |
-      replicaCount: 3
+    
 
   destination:
     server: https://kubernetes.default.svc
