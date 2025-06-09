@@ -13,7 +13,7 @@ spec:
       valueFiles:
       - $values/argocd/values.yaml
       values: |
-        replicaCount: 1
+        replicaCount: 2
   - repoURL: 'https://github.com/Nirm01/helm-argocd'
     targetRevision: main
     ref: values
