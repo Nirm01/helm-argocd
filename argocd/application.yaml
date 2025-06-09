@@ -14,6 +14,8 @@ spec:
       - $values/argocd/values.yaml
       values: |
         replicaCount: 2
+        image:
+          tag: 1.27.0
   - repoURL: 'https://github.com/Nirm01/helm-argocd'
     targetRevision: main
     ref: values
