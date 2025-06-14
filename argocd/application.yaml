@@ -18,6 +18,7 @@ spec:
   - repoURL: 'https://github.com/Nirm01/helm-argocd'
     targetRevision: main
     ref: values
+    path: argocd
     
 
   destination:
