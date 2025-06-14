@@ -14,6 +14,8 @@ spec:
       #- $values/argocd/values.yaml
       values: |
         image:
+          registry: docker.io
+          repository: bitnami/nginx
           tag: 1.110.0
   - repoURL: 'https://github.com/Nirm01/helm-argocd.git'
     targetRevision: main
