@@ -11,7 +11,7 @@ spec:
     targetRevision: 20.0.7
     helm:
       valueFiles:
-      - $values/values.yaml
+      - $values
       values: |
         image:
           tag: 1.110.0
