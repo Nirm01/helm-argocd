@@ -10,13 +10,13 @@ spec:
     chart: nginx
     targetRevision: 20.0.7
     helm:
-      #valueFiles:
-      #- $values/argocd/values.yaml
-      values: |
-        image:
-          registry: docker.io
-          repository: bitnami/nginx
-          tag: 1.110.0
+      valueFiles:
+      - $values/argocd/values.yaml
+      # values: |
+      #   image:
+      #     registry: docker.io
+      #     repository: bitnami/nginx
+      #     tag: 1.110.0
   - repoURL: 'https://github.com/Nirm01/helm-argocd.git'
     targetRevision: main
     ref: values
