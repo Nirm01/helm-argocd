@@ -10,8 +10,8 @@ spec:
     chart: nginx
     targetRevision: 20.0.7
     helm:
-      valueFiles:
-      - $values/argocd/values.yaml
+      #valueFiles:
+      #- $values/argocd/values.yaml
       values: |
         image:
           tag: 1.110.0
