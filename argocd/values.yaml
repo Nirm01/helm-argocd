@@ -7,3 +7,7 @@ ingress:
   path: /
   ingressClassName: nginx
   annotations: {}
+image:
+  registry: docker.io
+  repository: bitnami/nginx
+  tag: 1.110.0
