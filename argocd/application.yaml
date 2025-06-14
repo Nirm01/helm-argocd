@@ -12,7 +12,9 @@ spec:
     helm:
       valueFiles:
       - $values/argocd/values.yaml
-      # values: |
+      values: |
+        service:
+          type: ClusterIP
       #   image:
       #     registry: docker.io
       #     repository: bitnami/nginx

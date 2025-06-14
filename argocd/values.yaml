@@ -1,13 +1,7 @@
 replicaCount: 3
-service:
-  type: ClusterIP
 ingress:
   enabled: false
   hostname: nginx.local
   path: /
   ingressClassName: nginx
   annotations: {}
-image:
-  registry: docker.io
-  repository: bitnami/nginx
-  tag: 1.110.0
