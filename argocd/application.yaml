@@ -12,9 +12,9 @@ spec:
     helm:
       valueFiles:
       - $values/argocd/values.yaml
-      values: |
-        service:
-          type: ClusterIP
+      #values: |
+      #  service:
+      #    type: ClusterIP
   - repoURL: 'https://github.com/Nirm01/helm-argocd.git'
     targetRevision: main
     ref: values

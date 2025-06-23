@@ -8,4 +8,4 @@ ingress:
 image:
   registry: docker.io
   repository: bitnami/nginx
-  tag: 1.110.0
+  tag: 1.28.0
